@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         informator wrapper
 // @namespace    dev/null
-// @version      0.4
+// @version      0.4.1
 // @description  try to take over the world!
 // @author       g00dy22
 // @include      /^https?:\/\/[^\.]*\.?informator\.ua\/.*$/
