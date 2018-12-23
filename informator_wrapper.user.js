@@ -52,7 +52,8 @@
         var t_ckeywords = ["КаВуН", "советы эксперта", "сегодня праздник", "футбол",
                            "Сравнение цен", ": ТОП ", "ТОП-10", "Кредит", "рассрочка", "черная пятница",
                           "кинопремьер", "куда пойти", "Информатор FM", "Мамахохотала", "Зеленский",
-                          "Как сэкономить", "Конкорд", "итоги недели", "Загид", "SOHO"]
+                          "Как сэкономить", "Конкорд", "итоги недели", "Загид", "SOHO", "Stand Up",
+                          "Днепр в лицах", "Тимошенко"]
         var t_skeywords = ["ТОП"]
 
         // Remove article by title - h1
@@ -64,7 +65,7 @@
         remove_parent_nodes(prepare_query('//li[@class="infinite-post"]/a[' + title_expression.replace(/#ENTITY#/g, '@title') + ']'));
 
         // Remove paragraphs by keywords
-        var p_keywords = ["Ранее мы","Ранее Информатор","быть в курсе всех событий","SOHO"]
+        var p_keywords = ["Ранее мы","Ранее Информатор","быть в курсе всех событий","SOHO","Хотите узнавать первым"]
 
         var paragraph_expression = p_keywords.map(contains_condition).join(' or ')
         remove_nodes(prepare_query('//*[@id="content-main"]/p[' + text_entity(paragraph_expression) + ']'));
