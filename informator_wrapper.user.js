@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         informator wrapper
 // @namespace    dev/null
-// @version      0.4.2
+// @version      0.4.3
 // @description  try to take over the world!
 // @author       g00dy22
 // @include      /^https?:\/\/[^\.]*\.?informator\.ua\/.*$/
@@ -66,7 +66,7 @@
         remove_parent_nodes(prepare_query('//li[@class="infinite-post"]/a[' + title_expression.replace(/#ENTITY#/g, '@title') + ']'));
 
         // Remove paragraphs by keywords
-        var p_keywords = ["Ранее мы","Ранее Информатор","быть в курсе всех событий","SOHO","Хотите узнавать первым"]
+        var p_keywords = ["Ранее мы","Ранее Информатор","быть в курсе всех событий","SOHO","Хотите узнавать первым","Напомним, наши коллеги"]
 
         var paragraph_expression = p_keywords.map(contains_condition).join(' or ')
         remove_nodes(prepare_query('//*[@id="content-main"]/p[' + text_entity(paragraph_expression) + ']'));
